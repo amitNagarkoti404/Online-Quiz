@@ -1,0 +1,10 @@
+<h1 class="text-center mt-3 display-3 font-weight-bolder"><%= @quiz.name %></h1>
+
+
+
+
+<% if current_user.admin?%>
+	<%= render 'admin_show' %>
+<% else %>
+	<%= render 'takeQuiz' %>
+<% end %>

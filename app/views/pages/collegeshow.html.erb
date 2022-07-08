@@ -1,0 +1,14 @@
+
+<% if college_signed_in? %>
+<h3>College Name -  <%= current_college.college_name %> </h3>
+<br/>
+<br/>
+  <%= link_to 'Edit profile', edit_college_registration_path, class:"btn btn-outline-secondary btn-lg" %> <br/><br/>
+  <%= link_to 'Sign out', destroy_college_session_path, method: :delete, class:"btn btn-outline-secondary btn-lg" %> <br/><br/>
+<%= link_to 'Show Departments', departments_path, class:'btn btn-warning'%><br/>
+
+ 
+<% else %>
+  <%= link_to 'Sign in', new_college_session_path, class:"btn btn-outline-secondary  btn-lg" %> <br/><br/>
+  <%= link_to 'Sign up', new_college_registration_path, class:"btn btn-outline-secondary  btn-lg" %> <br/><br/>
+<% end %>

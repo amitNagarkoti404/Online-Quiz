@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dept name:</strong>
+  <%= @department.Dept_name %>
+</p>
+
+<%= link_to 'Edit', edit_department_path(@department),class:'btn btn-secondary'  %> 
+<br/>
+<h2>Add a Course:</h2>
+<%= render 'courses/form' %>
+<br/>
+<br/>
+<h2>Courses</h2>
+<%= render @department.courses %>
+<br/>
+<%= link_to 'Back', departments_path,class:'btn btn-info' %>

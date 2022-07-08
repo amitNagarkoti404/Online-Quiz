@@ -1,0 +1,17 @@
+<%= form_with model: [ @department, @department.courses.build ] do |form| %>
+  
+
+  <div class="field">
+    <%= form.text_field :course_name ,class:"form-control",placeholder:"Course Name"%>
+  </div>
+
+  <br/>
+  <br/>
+  <div class="field">
+    <%= form.text_field :department_id ,class:"form-control",placeholder:"Course Name"%>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit class:'btn btn-warning'%>
+  </div>
+<% end %>

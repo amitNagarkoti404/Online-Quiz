@@ -1,0 +1,21 @@
+<table class="table  table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Course name</th>
+       <th>Department id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  
+      <tr>
+        <td><%= course.course_name %></td>
+        <td><%= course.department_id %>
+        
+        <td><%= link_to 'Show',[course.department, course] %></td>
+        <td><%= link_to 'Destroy', [course.department, course], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+
+</table>
